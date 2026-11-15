@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Mum ❤️</title>
+<style>
+:root { --cream:#fffaf2; --wine:#713d4c; --gold:#b58a50; --ink:#49363a; }
+* { box-sizing:border-box; }
+body {
+  margin:0; color:var(--ink); font-family:Georgia,'Times New Roman',serif;
+  background:radial-gradient(circle at top left,#f7e5df 0,transparent 34%),
+             linear-gradient(135deg,#fffaf2,#f8eee7);
+}
+.page { min-height:100vh; padding:28px 16px 48px; display:flex; justify-content:center; }
+.card {
+  width:min(760px,100%); background:rgba(255,255,255,.85);
+  border:1px solid #ead8c8; border-radius:28px; overflow:hidden;
+  box-shadow:0 18px 60px rgba(93,56,57,.12);
+}
+.hero { text-align:center; padding:58px 28px 44px; }
+.eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:4px; font:12px Arial,sans-serif; }
+h1 { color:var(--wine); font-size:clamp(42px,8vw,70px); line-height:1.02; font-weight:normal; margin:20px 0 12px; }
+.subtitle { font-size:19px; line-height:1.7; max-width:540px; margin:auto; }
+.heart { color:#c77d83; font-size:25px; margin-top:22px; }
+.divider { width:74px; height:1px; background:var(--gold); margin:30px auto; }
+section { padding:8px 38px 28px; text-align:center; }
+h2 { color:var(--wine); font-weight:normal; font-size:30px; margin:8px 0 18px; }
+p { font-size:18px; line-height:1.9; margin:0 auto 16px; max-width:620px; }
+.scripture { margin:8px 28px 34px; padding:28px 24px; border-radius:20px; background:#f8eee8; border:1px solid #ecdcd1; text-align:center; }
+.scripture p { color:var(--wine); font-style:italic; font-size:20px; }
+.reference { color:var(--gold); font:12px Arial,sans-serif; letter-spacing:2px; text-transform:uppercase; }
+.prayer { background:#713d4c; color:#fff8f1; padding:36px 30px; text-align:center; }
+.prayer h2 { color:#fff1e6; }
+.prayer p { font-size:17px; }
+.closing { padding:38px 28px 44px; text-align:center; }
+.signature { color:var(--wine); font-size:25px; font-style:italic; margin-top:20px; }
+button { border:0; border-radius:30px; padding:14px 24px; background:var(--wine); color:white; font:14px Arial,sans-serif; cursor:pointer; margin-top:12px; }
+button:hover { background:#8a5361; }
+#blessing { display:none; margin:22px auto 0; max-width:560px; color:var(--wine); font-style:italic; }
+footer { text-align:center; color:#a78b80; font:11px Arial,sans-serif; letter-spacing:2px; padding:0 12px 24px; }
+@media(max-width:520px) {
+  .hero { padding:48px 22px 34px; }
+  section { padding:8px 24px 24px; }
+  p { font-size:17px; }
+  .scripture { margin-left:18px; margin-right:18px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<main class="card">
+<header class="hero">
+  <div class="eyebrow">A day to celebrate you</div>
+  <h1>Happy Birthday,<br>Mum!</h1>
+  <p class="subtitle">To a woman whose love is a blessing, whose heart is beautiful, and whose life is a precious gift from God.</p>
+  <div class="heart">♡ ✧ ♡</div>
+</header>
+
+<div class="divider"></div>
+
+<section>
+  <h2>My beautiful Mum</h2>
+  <p>Some people make life brighter simply by being in it, and you are one of those people. Your love, kindness, wisdom, and strength mean more to me than words could ever fully express.</p>
+  <p>Thank you for every kind word, every prayer, every moment of care, and all the love you have given. I hope you know how deeply you are appreciated. I carry so much gratitude in my heart for you.</p>
+  <p>Today, I celebrate you — the beautiful person God created you to be. You deserve to feel loved, cherished, honoured, and celebrated, not just today but every day.</p>
+</section>
+
+<div class="scripture">
+  <p>“The Lord bless you and keep you; the Lord make his face shine on you and be gracious to you.”</p>
+  <div class="reference">Numbers 6:24–25</div>
+</div>
+
+<section>
+  <h2>My prayer for you</h2>
+  <p>May this new year of your life be filled with God's peace, favour, and unending grace. May He strengthen you where you feel tired, comfort you where you need healing, and surprise you with blessings beyond what you have prayed for.</p>
+  <p>May your home be filled with laughter, your heart with contentment, your days with purpose, and your path with divine guidance. May every seed of kindness you have planted return to you in beautiful ways. May God grant you good health, long life, answered prayers, and countless reasons to smile.</p>
+</section>
+
+<div class="prayer">
+  <h2>A promise to remember</h2>
+  <p>“She is clothed with strength and dignity; she can laugh at the days to come.”</p>
+  <p><strong>Proverbs 31:25</strong></p>
+  <p>May you keep walking in that strength and dignity, knowing that the God who has carried you this far will never leave your side.</p>
+</div>
+
+<div class="closing">
+  <h2>I love you, Mum ❤️</h2>
+  <p>Thank you for being you. I pray this birthday is only the beginning of a year more beautiful than you imagined. May you always see just how precious you are — to God and to all of us who are blessed to have you.</p>
+  <button onclick="showBlessing()">One more blessing ❤️</button>
+  <p id="blessing">May the Lord write beautiful chapters in this new season of your life. May joy find you, goodness follow you, and His love surround you every single day. In Jesus’ name, Amen. ❤️</p>
+  <div class="signature">With all my love, always.</div>
+</div>
+
+<footer>MADE WITH LOVE & GRATITUDE · GOD BLESS YOU ALWAYS</footer>
+</main>
+</div>
+<script>
+function showBlessing() {
+  const blessing = document.getElementById("blessing");
+  blessing.style.display = "block";
+  blessing.scrollIntoView({ behavior:"smooth", block:"center" });
+}
+</script>
+</body>
+</html>
